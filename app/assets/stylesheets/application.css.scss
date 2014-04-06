@@ -13,3 +13,44 @@
  *= require_tree .
  *= require_self
  */
+$navbar-inverse-bg: #00305f;
+$navbar-inverse-border: #00305f;
+
+// Inverse navbar
+
+.navbar-inverse {
+background-color: $navbar-inverse-bg;
+border-color: $navbar-inverse-border;
+color:#fff;
+}
+
+.navbar-inverse .navbar-brand {
+	color:#fff;
+}
+
+body {
+	margin-top: 125px; /* adjust this if the height of the menu bar changes */
+}
+
+.nav {
+	margin-top: 28px; /* this is a faux center fix for the nav options - adjust this if you wish to change the logo height or the font of the menu items */
+}
+
+footer {
+margin-top: 45px;
+padding-top: 5px;
+border-top: 1px solid #eaeaea;
+color: #999;
+}
+footer ul {
+float: right;
+list-style: none;
+}
+footer ul li {
+float: left;
+margin-left: 10px;
+}
+.orange {
+	color:#f2b62a;
+}
+/*f2b62a*/
