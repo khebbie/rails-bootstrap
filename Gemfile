@@ -1,7 +1,15 @@
 source 'https://rubygems.org'
 ruby '2.1.1'
 gem 'rails', '4.0.4'
-gem 'sqlite3'
+# Postgres support (added for Heroku)
+group :development do
+  gem "sqlite3-ruby"
+end
+
+group :production do
+  gem "pg"
+end
+
 gem 'sass-rails', '~> 4.0.2'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -24,3 +32,5 @@ group :test do
   gem 'database_cleaner', '1.0.1'
   gem 'email_spec'
 end
+
+gem 'rails_12factor', group: :production
