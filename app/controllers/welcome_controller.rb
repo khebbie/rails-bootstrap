@@ -4,5 +4,6 @@ class WelcomeController < ApplicationController
 
   def program
   end
-  
+  def tilmelding
+  end
 end
