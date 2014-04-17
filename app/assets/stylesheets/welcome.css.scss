@@ -1,3 +1,40 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#ticket-2-heaven-iframe {
+  width: 760px;
+}
+ 
+.container {
+  text-align: left;
+}
+ 
+div.row label {
+  display: inline-block;
+  margin: 5px 0;
+  width: 150px;
+}
+ 
+span.required {
+  color: OrangeRed;
+}
+
+.col1{
+                      width:30px;
+}
+ 
+.col2{
+                      width:30px;
+}
+ 
+.col3{
+                      width:220px;
+}
+ 
+.col4{
+                      width:65px;
+}
+ 
+.errorMessage{
+                      color:red;
+}
