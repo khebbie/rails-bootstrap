@@ -6,4 +6,7 @@ class WelcomeController < ApplicationController
   end
   def tilmelding
   end
+
+   def aktiviteter
+  end
 end
