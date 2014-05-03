@@ -10,6 +10,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+  <div class="container">
     <header>
       <%= render 'layouts/navigation' %>
     </header>
@@ -17,8 +18,9 @@
        <%= render 'layouts/messages' %>
        <%= yield %>
     </main>
-<footer class="footer">
-
+</div>
+<footer class="footer" role="contentinfo">
+<div class="container">
   <small>
     <a href="http://khebbie.dk/" class="brand">Lavet af khebbie</a>
   </small>
@@ -36,6 +38,7 @@
       <li><%= link_to "Agape", "http://www.foreningenagape.dk/" %> </li>
     </ul>
   </nav>
+  </div>
 </footer>
   </body>
 </html>
