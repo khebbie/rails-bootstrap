@@ -19,7 +19,64 @@
        <%= yield %>
 
     </main>
-    <div class="col-md-4"><script type="text/javascript" src="//p3k.org/rss/index.js?url=https%3A%2F%2Fwww.facebook.com%2Ffeeds%2Fpage.php%3Fid%3D361372487260005%26format%3Drss20&amp;maxItems=7&amp;width=200&amp;height=-1&amp;radius=5&amp;frameColor=%23b3a28e&amp;titleBarColor=%2300305F&amp;titleBarTextColor=%23F2F2F2&amp;boxFillColor=%23FFFFFF&amp;textColor=%2395412b&amp;linkColor=%232c7395&amp;fontFace=10pt%20sans-serif&amp;showXmlButton=true"></script></div>
+    <div class="col-md-4" id="rss-feeds"><a href="http://www.facebook.com/mandekonference"> <h4>Fra facebook</h4></a><hr></div>
+     <script>
+      jQuery(function($) {
+        $("#rss-feeds").rss("https://www.facebook.com/feeds/page.php?id=361372487260005&format=rss20",
+  {
+    // how many entries do you want?
+    // default: 4
+    // valid values: any integer
+    limit: 10,
+
+    // will request the API via https
+    // default: false
+    // valid values: false, true
+    ssl: true,
+
+    // outer template for the html transformation
+    // default: "<ul>{entries}</ul>"
+    // valid values: any string
+    layoutTemplate: "<div class='feed-container'>{entries}</div>",
+
+    // inner template for each entry
+    // default: '<li><a href="{url}">[{author}@{date}] {title}</a><br/>{shortBodyPlain}</li>'
+    // valid values: any string
+    entryTemplate: '<p><a href="{url}"> <strong>{title}</strong> {teaserImage}</a></p>',
+
+    // additional token definition for in-template-usage
+    // default: {}
+    // valid values: any object/hash
+    tokens: {
+      foo: 'bar',
+      bar: function(entry, tokens) { return entry.title }
+    },
+
+    // output mode of google feed loader request
+    // default: 'json'
+    // valid values: 'json', 'json_xml'
+    outputMode: 'json_xml',
+
+    // the effect, which is used to let the entries appear
+    // default: 'show'
+    // valid values: 'show', 'slide', 'slideFast', 'slideSynced', 'slideFastSynced'
+    effect: 'slideFastSynced',
+
+    // a callback, which gets triggered when an error occurs
+    // default: function() { throw new Error("jQuery RSS: url don't link to RSS-Feed") }
+    error: function(){},
+
+    // a callback, which gets triggered when everything was loaded successfully
+    // this is an alternative to the next parameter (callback function)
+    // default: function(){}
+    success: function(){}
+  },
+
+  // callback function
+  // called after feeds are successfully loaded and after animations are done
+  function callback() {})
+      })
+    </script>
 </div>
 <footer class="footer" role="contentinfo">
 <div class="container">
