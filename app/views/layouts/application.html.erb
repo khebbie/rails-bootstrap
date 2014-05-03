@@ -44,13 +44,6 @@
     // valid values: any string
     entryTemplate: '<p><a href="{url}"> <strong>{title}</strong> {teaserImage}</a></p>',
 
-    // additional token definition for in-template-usage
-    // default: {}
-    // valid values: any object/hash
-    tokens: {
-      foo: 'bar',
-      bar: function(entry, tokens) { return entry.title }
-    },
 
     // output mode of google feed loader request
     // default: 'json'
@@ -60,16 +53,7 @@
     // the effect, which is used to let the entries appear
     // default: 'show'
     // valid values: 'show', 'slide', 'slideFast', 'slideSynced', 'slideFastSynced'
-    effect: 'slideFastSynced',
-
-    // a callback, which gets triggered when an error occurs
-    // default: function() { throw new Error("jQuery RSS: url don't link to RSS-Feed") }
-    error: function(){},
-
-    // a callback, which gets triggered when everything was loaded successfully
-    // this is an alternative to the next parameter (callback function)
-    // default: function(){}
-    success: function(){}
+    effect: 'slideFastSynced'
   },
 
   // callback function
