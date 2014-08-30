@@ -4,7 +4,7 @@ class WelcomeController < ApplicationController
 
   def program
   end
-  def tilmelding
+  def evaluering
   end
 
    def aktiviteter
