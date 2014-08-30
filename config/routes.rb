@@ -3,5 +3,5 @@ RailsBootstrap::Application.routes.draw do
   get "welcome/index"
   get "welcome/program"
   get "welcome/aktiviteter"
-  get "welcome/tilmelding"
+  get "welcome/evaluering"
 end
